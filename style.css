@@ -1,39 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
-/* Login page */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: sans-serif;
-  background: linear-gradient(to right, #155799, #159957);
+  background: url(https://c4.wallpaperflare.com/wallpaper/748/433/119/simple-minimalism-gradient-abstract-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: whitesmoke;
-  margin-top: 30px;
-  padding: 30px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.photo detail {
+  display: flex;
+  flex-direction: row;
+}
 
 h1 {
-  text-align: center;
-  color: whitesmoke;
-  font-size: 50px;
-  margin-top: 50px;
+  background-color: #e82a2a;
+  color: white;
+  font-size: 30px;
+  width: 100%;
+  padding: 10px;
   font-family: 'Bruno Ace', cursive;
 }
 
-form {
-  width: 35rem;
-  margin: auto;
-  color: whitesmoke;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(11, 15, 13, 0.582);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  padding: 20px 25px;
+h3{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
 }
 
-input[type=email],
-input[type=password],
-input[text] {
+.conta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.field {
+  width: 35%;
+  padding: 25px;
+  margin-top: 30px;
+  border-radius: 25px;
+  color: whitesmoke;
+  border: 5px solid white;
+  backdrop-filter: blur(1px);
+}
+
+label {
+  color: white;
+  font-size: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
   width: 100%;
   margin: 10px 0;
   border-radius: 5px;
@@ -42,32 +75,26 @@ input[text] {
 }
 
 button {
-  background-color: #030804;
+  background-color: black;
   color: white;
   padding: 14px 20px;
   border-radius: 5px;
-  margin: 7px 0;
+  margin: 5px 0;
   width: 100%;
   font-size: 18px;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 button:hover {
-  opacity: 0.6;
+  color: white;
+  background-color: #e82a2a;
   cursor: pointer;
 }
-
-.headingsContainer {
-  text-align: center;
-}
-
-.headingsContainer p {
-  color: gray;
-}
-
-.mainContainer {
-  padding: 16px;
-}
-
 
 .subcontainer {
   display: flex;
@@ -88,7 +115,12 @@ span.forgotpsd a {
 }
 
 .forgotpsd a {
-  color: rgb(74, 146, 235);
+  color: rgb(0, 0, 0);
+}
+
+.forgotpsd a:hover {
+  color: lightblue;
+  font-weight: bold;
 }
 
 .forgotpsd a:link {
@@ -101,9 +133,56 @@ span.forgotpsd a {
 }
 
 .register a {
-  color: rgb(74, 146, 235);
+  color: rgb(0, 0, 0);
+}
+
+.register a:hover {
+  color: lightblue;
+  font-weight: bold;
 }
 
 .register a:link {
   text-decoration: none;
+}
+
+img {
+  margin-top: 5vh;
+}
+
+.detail {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 20px;
+  width: 50%;
+  padding: 15px;
+  color: whitesmoke;
+  border-radius: 20px;
+}
+
+
+/* Style for the footer */
+footer {
+  background-color: #e82a2a;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0 10px 0 ;
+}
+
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
 }
